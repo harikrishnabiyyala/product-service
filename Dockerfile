@@ -25,7 +25,7 @@ FROM eclipse-temurin:21-jre-jammy AS runtime
 WORKDIR /app
 
 # Copy the JAR file from the build stage
-COPY --from=build /app/target/*. product-service.jar
+COPY --from=build /app/target/*.jar product-service.jar
 
 # Expose the application port
 EXPOSE 8080
